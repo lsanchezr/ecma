@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Funciones</title>
+</head>
+<body></body>
+<script type="text/javascript">
+  //Como empezar a hacer una función
+  function test(){//Inicio de una función
+  console.log("llamamos a la función")//Imprimimos una mensaje en la consola
+}
+  test()//llamamos a la función
+
+  function retStr(){//Iniciamos una función
+   return "hello world!!!"//Retornamos un mensaje por medio de la función
+ }//Fin de la función
+  var val=retStr();//Guardando el contenido de la función en una variable
+  console.log(val);//Imprimimos la variable en consola
+
+//Como crear una función pasandole parametros a la misma
+  function add( n1,n2){
+   var sum=n1 + n2;
+   console.log("El valor de la suma es: "+sum);
+  }
+  add(70,13);
+
+</script>
+</html>

@@ -147,8 +147,57 @@ console.log("El valor inicial decrementa 1: "+num2)
   console.log("a%=b: " + a);
 
   //Conactenacion de operadores 'string'
-  var msg="hello"+"world"
-  console.log(msg);
+  var msg="hello"+"world"//Como concatenar una variable
+  console.log(msg);//imprimimos la variable
+
+  var num='HOLA';//Manera de saber que tipo de variable declaramos
+  console.log(typeof num);//Manera de saber que tipo de variable es
+
+  //Ejemplo condicion IF
+  var num=5
+  if (num<0){
+   console.log("Numero positivo")
+   }else {
+     console.log("Numero negativo")
+   }
+
+   //Ejemplo condicional IF y ELSE para definir un numero impar o par
+  var num= 1;
+  if (num % 2==0)  {
+   console.log("Par");
+  }
+  else{
+  console.log("Impar");
+  }
+
+//Ejemplo de una condición anidada
+  var n=0;
+  if(n > 0){
+  console.log(n+" Es positivo")
+  }
+  else if(n < 0){
+  console.log(n+" Es negativo")
+  }
+  else{
+  console.log(n+" No es ni negativo ni positivo")
+  }
+
+//Ejemplo de una condicional de desición 'switch'
+var opc="A";
+  switch(opc){
+    case "A":
+    console.log("Excelente");
+    break;
+
+    case "B":
+    console.log("Bien");
+    break;
+
+    default:
+    console.log("Opc Invalida");
+    break;
+
+  }
 
 </script>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Funciones Ciclicas</title>
+</head>
+<body></body>
+<script type="text/javascript">
+  //Ejemplo de un ciclo FOR
+  var n=5
+  var f=1;
+  for(let i=n ; i>=1; i--){//estamos declarando a i como una var restringida
+   f *= i ;
+   console.log(f);//imprimira todos los resultados
+  }
+  console.log(f);//indicamos que solo imprima el ultimo resultado
+
+  for(let temp, i=0, j=1; j<30; temp = i, i = j, j = i + temp)
+  console.log(j);
+
+//Ejemplo de for con propiedades de un objeto
+  var obj = {a:1, b:2, c:3};
+  for (var prop in obj) {
+   console.log(obj[prop]);
+  }
+
+//Ejemplo del ciclo while
+  var n=5;
+  var fac=1;
+  while(n>=1){
+   fac=fac * n;
+   n--;
+  }
+  console.log("El factorial es: "+fac);
+
+//Ejemplo del bucle Do-While
+  var n=5;
+  do{
+  console.log(n);
+  n--;
+  }while(n>=0);
+
+</script>
+</html>
