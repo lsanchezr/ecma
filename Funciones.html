@@ -21,11 +21,75 @@
   console.log(val);//Imprimimos la variable en consola
 
 //Como crear una función pasandole parametros a la misma
-  function add( n1,n2){
+  function Parametros(n1,n2){
    var sum=n1 + n2;
    console.log("El valor de la suma es: "+sum);
   }
-  add(70,13);
+  Parametros(70,13);
+
+  function Para1(a, b = 1) {
+   return a+b;
+  }
+  console.log(Para1(10))
+
+//El valor de a y b se sobre escribira por 4 y se sumara con 2
+  function Para2(a, b = 1) {
+   return a+b;
+  }
+  console.log(Para2(4,2))
+
+//Función que nos indica cuantos parametros estamos pasando a la función
+  function fun1(...params) {
+   console.log(params.length);
+  }
+  fun1();
+  fun1(5);
+  fun1(5, 6,9);
+
+//Ejemplo de una función anonima
+/*Declaramos una variable en la cual almacenamos el contenido de una funcion con parametros 'x' y 'y' la cual retorna la mutiplicación de ambos, despues creamos una función para mostrar el resultado de la multiplicación creamos una variable result que es donde vamos a guardar el valor de la función creada e imprimiremos en consola el resultado y al final mandamos llamar a la segunda función*/
+  var func = function(x,y){ return x*y };
+  function product(){
+  var result;
+  result = func(10,20);
+  console.log("El resultado es: "+result)
+  }
+  product();
+
+//Función Recursiva porque estamos usando una condicional
+  function factorial(num){
+   if(num<=0){
+  return 1;
+   }else{
+  return (num * factorial(num-1) )
+   }
+  }
+  console.log(factorial(6))
+
+  var foo=(x)=>10+x
+  console.log(foo(10))
+
+//Función de flecha o labda el simbolo es el siguiente =>
+  var msg=()=>
+  {
+   console.log("Función de flecha o lambda")
+  }
+  msg()
+
+  "use strict"
+  function* rainbow() { // the asterisk marks this as a generator
+  yield 'red';
+  yield 'orange';
+  yield 'yellow';
+  yield 'green';
+  yield 'blue';
+  yield 'indigo';
+  yield 'violet';
+  }
+  for(let color of rainbow()) {
+  console.log(color);
+  }
+
 
 </script>
 </html>
