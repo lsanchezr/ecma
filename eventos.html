@@ -7,6 +7,50 @@
   <title>Eventos</title>
 </head>
 <body>
+  <div id="header"></div>
+  <dov id="nav"></dov>
+  <div id="main">
+  <div id="section">
+    <p id="ev1">Hola</p>
+    <button type="button" onclick="saludo() ">Evento Onclick</button>
+  </div>
+
+  <div id="aside">
+    <h1>EVENTO DE FORMULARIO onsubmit</h1>
+    <p>El evento onsubmit se ejecuta al pulsar el botón de Enviar</p>
+    <p>El evento onreset se ejecuta al pulsar el botón de Limpiar</p>
+    <form name="miform" onreset="return Avisa()" onsubmit="return Comprueba()">
+        Nombre: <input type="text" name="nombre" size="10">
+        <br><br>
+        <button type="submit" name="button">Limpiar</button>
+        <button type="reset" name="button">Enviar</button>
+    </form>
+  </div>
+  </div>
+  <div id="footer"></div>
 
 </body>
+<script type="text/javascript">
+  function saludo() {
+    var v1="Adios";
+    // document.write("hola");
+    document.getElementById('ev1').innerHTML=v1;
+  }
+  function Avisa(){
+       var acepta=confirm("Atención se van a limpiar los datos del formulario");
+       if (acepta)
+           return true;
+       else
+           return false;
+   }
+   function Comprueba(){
+       if(document.miform.nombre.value=="")    {
+           alert("No ha metido ningún dato");
+           document.miform.nombre.focus();
+           return false;
+       }
+       else
+           return true;
+   }
+</script>
 </html>
